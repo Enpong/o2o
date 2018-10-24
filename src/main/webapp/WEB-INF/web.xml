@@ -7,7 +7,7 @@
 	<!-- 指定spring配置文件位置  -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:resources/spring-*.xml</param-value>
+		<param-value>classpath:springs/spring-*.xml</param-value>
 	</context-param>
 	
 	<!-- 注册字符集过滤器 -->
@@ -40,13 +40,13 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:resources/spring-mvc.xml</param-value>
+			<param-value>classpath:springs/spring-web.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
-		<url-pattern>*.do</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
 </web-app>
